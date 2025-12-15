@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    
+    <div class="container">
+        <header>
+            <h1>🎬 Movie Search</h1>
+            <p>Search for movies, TV shows, and series</p>
+        </header>
+
+        <div class="search-box">
+            <input id="search" type="text" placeholder="Enter movie name which you like...." />
+            <button onclick="searchMovies()">Search</button>
+        </div>
+
+        <div id="error" class="error"></div>
+        
+        <div id="results" class="results"></div>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
